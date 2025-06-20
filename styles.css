@@ -132,3 +132,51 @@ header{
 .btn:hover{
     background: #8a7854;
 }
+.about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img img{
+    border-radius: 0.5rem;
+}
+.about-text h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.about-text p{
+    font-size: 0.93rem;
+    margin: 0.5rem 0 1.1rem;
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.products-container .box{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+.products-container img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    background: #f1f1f1;
+    
+}
