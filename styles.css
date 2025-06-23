@@ -39,7 +39,10 @@ header{
     align-content: center;
     padding: 18px 100px;
     transition: 0.5s linear;
+}
+header.shadow{
     background: var(--text-color);
+    box-shadow: var(--box-shadow);
 }
 .logo img{
     width: 60px;
@@ -212,7 +215,7 @@ header{
 }
 .customers-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:  repeat(auto-fit, minmax(280px,auto));
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -245,8 +248,9 @@ header{
 }
 .footer{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:  repeat(auto-fit, minmax(240px,auto));;
     gap: 1.5rem;
+    background: #f1dec7;
 }
 .footer-box h2{
     font-size: 1.2rem;
@@ -288,4 +292,102 @@ header{
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+}
+.contact span{
+    display: flex;
+    align-items: center;
+}
+.contact i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    background: #f1dec7;
+}
+@media (max-width: 1050px) {
+    header {
+        padding: 16px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .home-text h1{
+        font-size: 2.1rem;
+    }
+}
+@media (max-width: 991px) {
+    header {
+        padding: 16px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+    .home-text h1{
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 768px) {
+    header{
+        padding: 12px 4%;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    .navbar {
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--second-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .navbar a {
+        color: var(--text-color);
+    }
+    .navbar a:hover{
+        color: var(--bg-color);
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .about{
+        align-items: center;
+    }
+}
+@media (max-width: 360px) {
+    header{
+        padding: 9px 4%;
+    }
+    .logo img{
+        width: 45px;
+    }
+    .home-text{
+        padding-top: 15px;
+    }
+    .home-text h1{
+        font-size: 1.4rem;
+    }
+    .home-text p{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .about-img {
+        order: 2;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .about-text h2{
+        font-size: 1.2rem;
+    }
+    .heading h2{
+        font-size: 1.2rem;
+    }
 }
